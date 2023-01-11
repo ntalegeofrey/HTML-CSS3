@@ -102,12 +102,18 @@ section h1 {
   margin: 0;
 }
 
-.project {
+.project-tile {
   margin: 10px;
   max-width: 400px;
+  text-decoration: none;
+  transition: transform 0.4s ease;
 }
 
-.project img {
+project-tile:hover {
+  transform: scale(1.05)
+}
+
+.project-tile img {
   
   max-width: 100%;
 }
@@ -119,4 +125,13 @@ section h1 {
   flex-wrap: wrap;
   margin: 20px auto 0;
   max-width: 900px
+}
+
+@media (max-width: 61.25em)
+html {
+    font-size: 58%;
+}
+@media (max-width: 75em)
+html {
+    font-size: 60%;
 }
