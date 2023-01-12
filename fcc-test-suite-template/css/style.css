@@ -2,14 +2,18 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-  background-color: #FCF0CC;font-family: 'Lato', sans-serif;
+  background-color: #45567d;font-family: 'Lato', sans-serif;
 }
 
 nav {
-  background-color: #A64253;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #be3144;
   color: #fff;
   display: flex;
   justify-content: flex-end;
@@ -19,6 +23,8 @@ nav {
   right: 0;
   left: 0;
   z-index: 100;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 40%);
+  height: 72px;
 }
 
 nav a {
@@ -28,10 +34,11 @@ nav a {
 }
 
 footer {
-  background-color: #A64253;
+  background-color: #303841;
   color: #fff;
   padding: 10px;
   text-align: center;
+  border-top: 5px solid #be3144;
 }
 
 header {
@@ -54,6 +61,7 @@ header h1 {
 
 header p {
   font-size: 30px;
+  color: #be3144
 }
 
 header::after {
@@ -74,12 +82,29 @@ header * {
 
 section  {
   text-align: center;
-  padding: 50px;
 }
 
 .bg-pinkish {
-  background-color: #A64283;
-  color: #fff
+  background-color: #303841;
+  color: #fff;
+  padding: 100px 50px;
+}
+
+.bg-pinkish h1 {
+  font-size: 6rem;
+}
+
+.bg-pinkish p {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.bg-pinkish {
+  margin: 0;
+}
+
+.bg-pinkish ul {
+  margin-top: 16px;
 }
 
 .social-ul {
@@ -98,15 +123,30 @@ section  {
   text-decoration: none;
 }
 
-section h1 {
+section h2 {
   margin: 0;
+  font-size: 2.5rem;
+  color: white;
+}
+
+section p {
+  margin-top: 16px;
+  font-size: 1.2rem;
+  color: white;
 }
 
 .project-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 10px;
-  max-width: 400px;
   text-decoration: none;
   transition: transform 0.4s ease;
+}
+
+.description {
+  background-color: #303841;
+  width: 100%;
 }
 
 project-tile:hover {
@@ -114,24 +154,50 @@ project-tile:hover {
 }
 
 .project-tile img {
-  
   max-width: 100%;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
 }
 
 .project-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  margin: 20px auto 0;
-  max-width: 900px
+  margin: 20px 50px;
+  border-radius: 2px;
+}
+
+.buttonContainer {
+  margin: 50px;
+}
+.buttonContainer button {
+  padding: 10px;
+  background-color: #303841;
+  color: white;
+  border: none;
+  border-radius: 2px;
+
+}
+.buttonContainer button:hover {
+  background-color: #be3144;
+  color: #303841;
+
+}
+.buttonContainer button span i {
+  margin-left: 5px;
+  font-size: 1.6rem;
+}
+.buttonContainer button h3 {
+  font-size: 1.6rem;
 }
 
 @media (max-width: 61.25em)
-html {
+{html {
     font-size: 58%;
-}
+}}
 @media (max-width: 75em)
-html {
+{html {
     font-size: 60%;
-}
+}}
